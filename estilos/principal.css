@@ -1,0 +1,837 @@
+        @font-face {
+            font-family: 'fuente100';
+            src: url(../fuentes/segoeui100.woff);
+        }
+
+        @font-face {
+            font-family: 'fuente400';
+            src: url(../fuentes/segoeui700.woff);
+        }
+
+        @font-face {
+            font-family: 'fuente700';
+            src: url(../fuentes/segoeui1000.woff);
+        }
+
+        @font-face {
+            font-family: 'fuente1000';
+            src: url(../fuentes/segoeui1300.woff);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'fuente100';
+            color: #333;
+            margin: 0px;
+            padding: 0px;
+            cursor: default;
+            background-color: transparent;
+            user-select: none;
+        }
+
+        div, td, th, input {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        select {
+            border-color: #fff;
+            transition: border-color 0.5S;
+        }
+
+        select:hover {
+            border-color: #000;
+        }
+
+        button {
+            font-family: 'fuente100';
+            background-color: #999;
+            font-size: 16px;
+            color: #fff;
+            padding: 4px 30px;
+            border: none;
+            transition: background-color 0.5s;
+        }
+
+        button:hover {
+            background-color: #666;
+        }
+
+        button.rojo:hover {
+            background-color: #f00;
+        }
+
+        div>table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 11.5px;
+        }
+
+        div>table>caption {
+            padding-bottom: 10px;
+            text-align: right;
+        }
+
+        div>table>caption>select {
+            margin-top: 10px;
+            margin-right: 20px;
+            font-family: 'fuente100';
+            font-size: 14px;
+        }
+
+        div>table>caption>div {
+            float: right;
+            text-align: center;
+            margin-left: 10px;
+            color: #ccc;
+            font-size: 28px;
+            transform: rotate(45deg);
+            transition: color 0.5s;
+        }
+
+        div>table>tbody>tr>td>span {
+            padding: 10px 70px;
+            /*outline: 1px solid #000;*/
+        }
+
+        #eliminar_fich_aud {
+            position: absolute;
+            top: 70px;
+            right: 0px;
+            color: #666;
+            font-size: 28px;
+            transform: rotate(45deg);
+            transition: color 0.5s;
+        }
+
+        div>table>caption>div:hover, #eliminar_fich_aud:hover {
+            color: #f33;
+        }
+
+        div>table>caption>input {
+            font-family: 'fuente100';
+            font-size: 26px;
+            width: 600px;
+            float: left;
+        }
+
+        div>table>caption>select {
+            margin: 0;
+            padding: 0;
+        }
+
+        div>table>tbody>tr {
+            border: none;
+        }
+
+        div>table>tbody>tr>td {
+            border: 2px solid #999;
+            height: 58px;
+            width: 25%;
+        }
+
+        div>table>tbody>tr>td>table {
+            width: 100%;
+            max-height: 36px;
+            min-height: 36px;
+            font-size: 30px;
+        }
+
+        div>table>tbody>tr>td>table>tbody>tr>td {
+            text-align: center;
+            color: #000;
+            width: 25%;
+            /**/
+        }
+
+        div>table>tbody>tr>td>table>tbody>tr>td>sup {
+            font-size: 14px;
+            color: #999;
+            float: right;
+            padding-right: 10px;
+        }
+
+        div>table>tbody>tr>td>table>tbody>tr>td>sub {
+            font-size: 10px;
+            float: left;
+        }
+
+        div>table>tbody>tr>td>table>tbody>tr>td>span {
+            float: right;
+        }
+
+        div>table>tbody>tr>td>div {
+            margin-top: -50px;
+            margin-right: 4px;
+            float: right;
+            font-size: 8px;
+        }
+
+        input[type=range] {
+            position: relative;
+            display: inline;
+            width: 80px;
+            height: 3px;
+
+        }
+
+        #logo {
+            margin: 2%;
+            width: 5%;
+            height: 5%;
+            opacity: 0.5;
+
+        }
+
+        #editor_compas {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 320px;
+            height: 96px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            box-shadow: 1px 1px 20px #ccc;
+        }
+
+        #editor_compas>input {
+            position: relative;
+            margin: 10px;
+            width: 295px;
+            font-family: 'fuente100';
+            font-size: 24px;
+        }
+
+        #editor_compas>button {
+            position: relative;
+            left: 74px;
+        }
+
+        #partituras {
+            position: absolute;
+            top: 80px;
+            padding: 0px;
+            width: 100%;
+            min-height: calc(100vh - 80px);
+            ;
+        }
+
+        #partituras>div {
+            margin: 70px 8%;
+            width: 70%;
+            vertical-align: text-top;
+        }
+
+        /*#partituras>div>table>tbody>tr>td>table>tbody>tr>td {}*/
+
+        #titulo_documento {
+            font-family: 'fuente100';
+            font-size: 46px;
+            margin: 80px 10% 0 90px;
+            width: 82%;
+            background-color: transparent;
+            text-align: center;
+        }
+
+        #menu {
+            position: fixed;
+            margin: 0;
+            top: 0px;
+            right: 0px;
+            width: 8%;
+            height: 100%;
+            background-color: #666;
+            font-size: 32px;
+            color: #fff;
+            text-align: center;
+        }
+
+        #mas, #indice, #info, #impres, #conf {
+            position: relative;
+            text-align: center;
+            margin: 20px auto;
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            border-radius: 25px 25px;
+            font-size: 32px;
+            color: #fff;
+            font-family: "fuente400";
+            vertical-align: middle;
+            opacity: 0.6;
+            transition: opacity 0.5s;
+        }
+
+        #mas:hover, #indice:hover, #conf:hover, #impres:hover, #info:hover {
+            opacity: 1;
+        }
+
+        #mas>img, #indice>img, #conf>img, #impres>img, #info>div>img {
+            position: relative;
+            top: 6px;
+        }
+
+        #menu>#conf {
+            position: absolute;
+            bottom: 0;
+            right: calc(50% - 25px);
+        }
+
+        #codigo_tema {
+            position: relative;
+            opacity: 0.3;
+        }
+
+        #codigo_tema>div>img {
+            margin-top: 6px;
+        }
+
+        #fondo_listado {
+            display: none;
+            margin: 0;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            background-image: linear-gradient(-90deg, #fff, #ccc);
+        }
+
+        /*#fondo_listado>div:nth-child(1) {}*/
+
+        #fondo_listado>div:nth-child(2) {
+            position: fixed;
+            left: 34%;
+            top: 20px;
+            color: #999;
+            font-size: 34px;
+        }
+
+        #fondo_listado>div:nth-child(2)>select {
+            background-color: transparent;
+            border: none;
+            font-family: 'fuente100';
+            margin-left: 32vw;
+            font-size: 14px;
+        }
+
+        #listado {
+            position: fixed;
+            top: 100px;
+            left: 12%;
+            width: 70%;
+            height: 70%;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #ccc;
+            overflow-y: auto;
+            overflow-x: hidden;
+            box-shadow: 10px 10px 60px #ccc;
+        }
+
+        #listado>div {
+            display: grid;
+            grid: 20px / 200px auto 20px;
+            grid-gap: 2px;
+            width: 95%;
+            margin: 10px;
+            padding: 5px;
+            background-color: transparent;
+            transition: background-color 0.7s;
+        }
+
+        #listado>div:hover {
+            background-color: #eee;
+        }
+
+        #listado>div>span:nth-child(1) {
+            font-family: "fuente400";
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        #listado>div>span:nth-child(2) {
+            font-family: "fuente400";
+        }
+
+        #listado>div>div:nth-child(3), #edicion>div, info>div:nth-child(1) {
+            float: right;
+            text-align: center;
+            margin: -10px 4px 0 0;
+            color: #999;
+            font-family: "fuente700";
+            font-size: 28px;
+            transform: rotate(45deg);
+            transition: color 0.5s;
+        }
+
+        #listado>div>div:nth-child(4) {
+            float: right;
+            margin: 0 40px 0 0;
+            font-size: 10px;
+        }
+
+        #listado>div>div:nth-child(5) {
+            float: right;
+            width: 40px;
+            height: 20px;
+            background-color: #ccc;
+            color: #fff;
+            text-align: center;
+            margin: 0 40px 0 0;
+            font-size: 14px;
+            transition: background-color 0.5s;
+        }
+
+        #listado>div>div:nth-child(5):hover {
+            background-color: #999;
+        }
+
+        #listado>div>div:nth-child(3):hover,
+        #edicion>div:hover,
+        info>div:nth-child(1):hover {
+            color: #000;
+        }
+        #edicion {
+            display: none;
+            position: fixed;
+            left: 1%;
+            top: 1.5%;
+            width: 90%;
+            height: 90%;
+            background-color: #fff;
+            border: 2px solid #999;
+            box-shadow: 10px 10px 50px #999;
+            text-align: left;
+            padding-top: 20px;
+            overflow: hidden;
+        }
+
+        #edicion>div {
+            margin: -20px 10px 0 0;
+        }
+
+        #edicion>span {
+            margin: 30px;
+            font-size: 21px;
+            font-family: "fuente400";
+        }
+
+        #edicion>span>span {
+            font-size: 14px;
+        }
+
+        #edicion>textarea {
+            font-family: Consolas, "Lucida Console", Arial, Helvetica, sans-serif;
+            color: #666;
+            font-size: 14px;
+            padding: 4px 10px;
+            border: 2px solid #ccc;
+            min-width: calc(100% - 80px);
+            max-width: calc(100% - 80px);
+            min-height: calc(100% - 200px);
+            max-height: calc(100% - 200px);
+            margin: 30px 30px 10px 30px;
+            white-space: pre-wrap;
+        }
+
+        #edicion>button {
+            font-family: 'fuente400';
+            font-size: 14px;
+            padding: 6px 8px;
+            margin-left: 6px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #ccc;
+            color: #000;
+        }
+
+        #edicion>button:hover {
+            background-color: #ddd;
+        }
+
+        #edicion>button:nth-child(6), #edicion>button:nth-child(9), #edicion>button:nth-child(10), #edicion>button:nth-child(12) {
+            margin-left: 22px;
+        }
+
+        #edicion>button:nth-child(6), #edicion>button:nth-child(7), #edicion>button:nth-child(8) {
+            border-left: 6px solid #f66;
+        }
+
+        #edicion>button:nth-child(9) {
+            border-left: 6px solid #66f;
+        }
+
+        #edicion>button:nth-child(10), #edicion>button:nth-child(11) {
+            border-left: 6px solid #6f6;
+        }
+
+        #edicion>button:nth-child(12), #edicion>button:nth-child(13), #edicion>button:nth-child(14) {
+            border-left: 6px solid #ff6;
+        }
+
+        #codigo_tema {
+            position: fixed;
+            padding: 0;
+            font-family: "fuente700";
+            left: 30px;
+            top: 90px;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            padding-bottom: 5px;
+            background-color: #222;
+            overflow: hidden;
+        }
+
+        #zoom {
+            position: fixed;
+            left: -50px;
+            top: 240px;
+            width: 200px;
+            transform: rotate(270deg);
+        }
+
+        input[type='range'] {
+            display: block;
+            width: 250px;
+            border: #666;
+        }
+
+        input[type='range']:focus {
+            outline: none;
+        }
+
+        input[type='range'],
+        input[type='range']::-webkit-slider-runnable-track,
+        input[type='range']::-webkit-slider-thumb {
+            -webkit-appearance: none;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            background-color: #999;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            margin-top: -9px;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            background-color: #999;
+            height: 3px;
+        }
+
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            outline: none;
+        }
+
+
+        /*000000000000000000000000000000000000000000000000000000000000000000000000*/
+
+        #audio {
+            display: none;
+            position: fixed;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            top: -2px;
+            left: 0;
+            height: 56px;
+            width: 92%;
+        }
+
+        #controles {
+            height: 56px;
+            background-color: #999;
+        }
+
+        #controles>table {
+            width: 101%;
+            height: 56px;
+            border-collapse: separate;
+        }
+
+        #controles>table>tbody>tr>td {
+            border: none;
+            font-family: 'fuente700';
+            height: 40px;
+            width: 40px;
+            background-color: #ccc;
+            color: #666;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 16px;
+            transition: color 0.5s;
+        }
+
+        #controles>table>tbody>tr>td>input[type=text] {
+            font-family: 'fuente100';
+            background-color: #ddd;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(1) {
+            width: 50px;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(1):hover {
+            color: #000;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(2) {
+            width: 50px;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(2):hover {
+            color: #000;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(3) {
+            width: 50px;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(3):hover {
+            color: #000;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(4):hover {
+            color: #000;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(6):hover {
+            color: #000;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(4) {
+            background-color: #fff;
+            max-width: 130px;
+            padding: 0;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(4)>input[type=range] {
+            width: 210px;
+            height: 13px;
+            margin-left: 30px;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(4)>input[type=text] {
+            font-family: 'fuente400';
+            width: 40px;
+            height: 13px;
+            margin-left: 10px;
+            font-size: 16px;
+            background-color: transparent;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(5) {
+            background-color: #fff;
+            text-align: right;
+            min-width: 120px;
+            transition: none;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(5)>span {
+            padding: 0 10px;
+            font-size: 11px;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(5)>input[type=text] {
+            font-family: 'fuente400';
+            width: 60px;
+            height: 13px;
+            font-size: 12px;
+            margin-right: 10px;
+            padding: 0 10px;
+            background-color: #ddd;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(5)>button {
+            height: 13px;
+            width: 13px;
+            padding: 0;
+            margin: 0;
+            font-size: 9px;
+            margin-right: 10px;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(5)>input[type=checkbox] {
+            margin-left: 10px;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(6) {
+            background-color: #fff;
+            max-width: 140px;
+        }
+
+        #controles>table>tbody>tr>td:nth-child(6)>input[type=text] {
+            font-family: 'fuente400';
+            width: 260px;
+            height: 18px;
+            padding: 0;
+            text-align: left;
+            font-size: 12px;
+            /*outline: 1px solid #ff0;*/
+            background-color: transparent;
+        }
+        #controles>table>tbody>tr>td:nth-child(6)>span>span{
+            padding:0px 10px;
+            background-color: #ddd;
+        }
+        #tema {
+            display: none;
+            position: fixed;
+            bottom: 0px;
+            width: 92%;
+            height: 50px;
+            background-color: #eee;
+        }
+
+        /***********************************************************************/
+
+        info {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background-color: #fff;
+            box-shadow: 10px 10px 50px #999;
+        }
+        info>div:nth-child(1) {
+            position: fixed;
+            right: 3%;
+            top: 2%;
+            font-size: 40px;
+            z-index: 10;
+        }
+
+        info>div:nth-child(2) {
+            left: 1%;
+            top: 2%;
+            width: 98%;
+            height:0%;
+            font-size: 16px;
+            font-family: "fuente100";
+            background-color: #000;
+            color: #999;
+            text-align: left;
+            padding: 4% 10% 4% 10%;
+            filter: invert(100%);
+        }
+
+        info>div>p {
+            white-space: pre-wrap;
+        }
+
+        info>div>p>span {
+            font-family: "fuente1000";
+        }
+
+        info>div>#mas, info>div>#indice, info>div>#info, info>div>#impres, info>div>#conf {
+            margin: 0;
+            margin-left: 10px;
+            filter: invert();
+        }
+
+        #reload {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            width: 20px;
+            height: 20px;
+            /*border: 1px solid #000;*/
+        }
+
+        #dev {
+            position: fixed;
+            top: 0px;
+            right: 74px;
+            width: 20px;
+            height: 20px;
+        }
+
+        code {
+            padding: 2px 8px;
+            background-color: #333;
+            font-family: Consolas, "fuente400";
+            font-weight: bolder;
+            color: #999;
+            border-radius: 6px;
+        }
+
+        code.json {
+            display: block;
+            white-space: pre;
+            border-radius: 0;
+        }
+
+        /***************************************/
+
+        #telon {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000;
+            opacity: 0.4;
+        }
+
+        #alertas {
+            display: none;
+            position: fixed;
+            top: calc(50vh - 100px);
+            left: 0;
+            width: 100vw;
+            height: 200px;
+            background-color: #fff;
+        }
+
+        #alertas>div:nth-child(1) {
+            position: fixed;
+            top: calc(50vh - 50px);
+            left: calc(50vw - 200px);
+            width: 400px;
+            height: 60px;
+            color: #000;
+            font-weight: 900;
+            text-align: left;
+        }
+
+        #alertas>div:nth-child(2) {
+            position: fixed;
+            top: calc(50vh - 100px);
+            right: 0;
+            width: 20px;
+            height: 20px;
+            color: #999;
+            font-family: "fuente700";
+            font-size: 28px;
+            transform: rotate(45deg);
+            transition: color 0.5s;
+        }
+
+        #alertas>div:nth-child(2):hover {
+            color: #f33;
+        }
+
+        #alertas>button:nth-child(3), #alertas>button:nth-child(4) {
+            position: fixed;
+            top: calc(50vh + 40px);
+            left: calc(50vw - 200px);
+            height: 36px;
+        }
+
+        #alertas>button:nth-child(4) {
+            left: calc(50vw + 84px);
+        }

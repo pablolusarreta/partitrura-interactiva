@@ -1,0 +1,10 @@
+directories:
+  output: dist
+  buildResources: build
+appId: partituras2020
+asar: true
+win:
+  target: NSIS
+  icon: assets/icons/win/icon.ico
+files: []
+electronVersion: 6.1.12

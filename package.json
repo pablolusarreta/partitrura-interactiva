@@ -1,0 +1,29 @@
+{
+  "name": "partituras",
+  "productName": "Partituras interactivas cifradas",
+  "version": "7.3.0",
+  "description": "Creador de partituras cifradas interactivo",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Pablo Lusarreta",
+  "license": "MIT",
+  "build": {
+    "appId": "partituras2020",
+    "asar": true,
+    "win": {
+      "target": "NSIS",
+      "icon": "assets/icons/win/icon.ico"
+    }
+  },
+  "dependencies": {
+    "electron-reload": "^1.5.0"
+  },
+  "devDependencies": {
+    "electron": "^6.1.12",
+    "electron-builder": "^23.6.0"
+  }
+}

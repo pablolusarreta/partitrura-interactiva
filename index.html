@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Partituras interactivas cifradas 7.3.0</title>
+    <link rel="shortcut icon" href="imagenes/icono.ico" />
+
+    <script type="text/javascript" src="codigos/principal.js"></script>
+    <script type="text/javascript" src="codigos/audio.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="estilos/principal.css" media="screen,print" />
+    <link rel="stylesheet" type="text/css" href="estilos/impresion.css" media="print" />
+
+
+</head>
+
+<body>
+    <div id="partituras"></div>
+
+    <input id="titulo_documento" type="text" value="" placeholder="Titulo descriptivo"
+        onchange="guarda_titulo(this.value)" />
+    <div id="fondo_listado">
+        <div> <img id="logo" src="assets\icons\win\icon.ico"></div>
+        <div>
+            <select onchange="guarda_config(Number(this.value))">
+                <option value="0">Orden alfabético</option>
+                <option value="1" selected>Orden por fecha de creación</option>
+            </select>
+        </div>
+        <div id="listado"></div>
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------------------->
+
+    <div id="audio" onclick="EC.style.display='none'">
+        <div id="controles"></div>
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------------------->
+
+    <audio controls id="tema"></audio>
+
+    <!------------------------------------------------------------------------------------------------------------------->
+
+    <div id="menu">
+
+        <div id="mas">
+            <img src="img/mas36x36.png">
+        </div>
+
+        <div id="indice" onclick="inicio()" title="Listado de documentos">
+            <img src="img/list36x36.png">
+        </div>
+
+
+        <div id="impres" title="Imprimir" onclick="imprime()">
+            <img src="img/impres36x36.png">
+        </div>
+
+        <div id="info" title="Información de la aplicación" onclick="informacion()">
+            <img src="img/info36x36.png">
+        </div>
+
+        <div id="conf" title="Editor de contenido" onclick="edita()">
+            <img src="img/config36x36.png">
+        </div>
+
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------->
+
+    <div id="editor_compas"><input type="text">
+        <button>Aceptar</button>
+        <button onclick="this.parentNode.style.display='none';">Cancelar</button>
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------------------->
+    <div id="edicion">
+        <div onclick="this.parentNode.style.display='none';">+</div>
+        <span>Editor datos <span>( Texto plano - sintaxis "JSON" )</span></span><br>
+        <textarea id="consola"></textarea><br>
+
+        <button onclick="actualizaBase();" class="lista"
+            title="Sustitulle TODA la base de datos local [ localStrorage ] por lo que este contenido en el EDITOR">Sobrescribe
+            toda la lista</button>
+
+        <button onclick="actualiza_tema();" class="tema" title="Actualiza el tema abierto">Actualiza tema</button>
+
+        <button onclick="anade_tema();" class="tema" title="Añade el tema a la base de datos">Añade tema</button>
+
+        <button onclick="cargaJson();" title="Carga en el EDITOR el contenido de un fichero JSON"
+            style="margin-left:20vw"> <span>Carga
+                fichero </span></button>
+
+        <button onclick="guardaJson(0);" class="lista" title="Guarda TODA la base de datos en un fichero JSON ">Guarda
+            toda la lista</button>
+
+        <button onclick="guardaJson(1);" class="tema" title="Guarda el TEMA ACTUAL en un fichero JSON ">Guarda
+            tema</button>
+
+        <br>
+        <button onclick="copia_portapapeles();" title="Selecciona todo y lo copia al portapapeles"
+            style="margin-left:20px;">select-copy</button>
+        <button onclick="limpiaconsola();" title="Limpia el cuadro de texto">Clear</button>
+        <button onclick="this.parentNode.style.display='none';" title="Salir del editor">Salir</button>
+
+    </div>
+    <div id="dev" ondblclick="ipcRenderer.send('dev', 1)"></div>
+    <info></info>
+</body>
+
+</html>
