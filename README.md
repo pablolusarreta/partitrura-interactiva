@@ -50,22 +50,17 @@
         </p>
 <h2>El menú</h2>
 <div id="mas"><img src="img/mas36x36.png"></div>
-        Si estamos en la pagina inicial crea un Tema nuevo y si estamos en modo edicion una sección.<br><br>
-<div id="indice">
-            <img src="img/list36x36.png">
-        </div>
-        Vuelve a la pagina inicial o listado de Temas.<br><br>
-<div id="conf">
-            <img src="img/config36x36.png">
-        </div>
-        Abre la página de edición de código, aquí se pueden editar los datos te toda la base, también sirve para
-        importar los datos de ficheros JSON o guardarlos en ese mismo formato, bien toda la base o por temas
-        independientes<br><br>
-<div id="impres">
-            <img src="img/impres36x36.png"> </div>
-        Imprime solo la partitura, algunos navegadores permiten crear un pdf, como Chrome o Edge.<br><br>
+<p>             Si estamos en la pagina inicial crea un Tema nuevo y si estamos en modo edicion una sección.<br><br></p>
+<div id="indice"><img src="img/list36x36.png"></div>
+<p>             Vuelve a la pagina inicial o listado de Temas.<br><br></p>
+<div id="conf"><img src="img/config36x36.png"></div>
+<p>             Abre la página de edición de código, aquí se pueden editar los datos te toda la base, también 
+             sirve para importar los datos de ficheros JSON o guardarlos en ese mismo formato, bien toda la 
+             base o por temas independientes<br><br></p>
+<div id="impres"><img src="img/impres36x36.png"></div>
+<p>             Imprime solo la partitura, algunos navegadores permiten crear un pdf, como Chrome o Edge.<br><br></p>
 <div id="info"><img src="img/info36x36.png"></div>
-        Abre este pequeño manual.<br><br>   
+<p>             Abre este pequeño manual.<br><br></p>  
 <h2>Sobre el editor de código :</h2>
         La app usa localStorage, una implementación de HTML5 para almacenar la información en texto plano
         representando
@@ -94,13 +89,10 @@
 
         </code>
 
-<p>        Lo mas importante que hay que saber es que si se comete un error de sintaxis, no podrán guardarse los
-        cambios corrompiendo la DB y que para las labores de copia de temas completos o secciones es imprescindible cambiar
-        el valor de los "ID" ya que se usan como identificadores únicos y representan una marca de tiempo de cuando se
-        llevo una acción de modificación en las secciones o de creación en los temas completos.<br><br>
-        <h3>Teclas implementadas :</h3>
-        <p>
-           <code>SPACE</code> &nbsp; &nbsp;      Pausa o pone en marcha el tema musical.<br><br>
-             <code>0</code>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Pone a 00:00 el tema actual.<br><br>
-             <code>ENTER</code>   &nbsp; &nbsp; Guarda los valores y pasa al siguiente compás. Al llegar al final cierra el editor de compases.<br><br>
-        </p>
+<p>Lo mas importante que hay que saber es que si se comete un error de sintaxis, no podrán guardarse los cambios corrompiendo la DB y que para las labores de copia de temas completos o secciones es imprescindible cambiar el valor de los "ID" ya que se usan como identificadores únicos y representan una marca de tiempo de cuando se llevo una acción de modificación en las secciones o de creación en los temas completos.<br><br>
+<h3>Teclas implementadas :</h3>
+<p>
+<code>SPACE</code> &nbsp; &nbsp;      Pausa o pone en marcha el tema musical.<br><br>
+<code>0</code>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Pone a 00:00 el tema actual.<br><br>
+<code>ENTER</code>   &nbsp; &nbsp; Guarda los valores y pasa al siguiente compás. Al llegar al final cierra el editor de compases.<br><br>
+</p>

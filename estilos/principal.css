@@ -738,10 +738,12 @@
 
         info>div>#mas, info>div>#indice, info>div>#info, info>div>#impres, info>div>#conf {
             margin: 0;
-            margin-left: 10px;
-            filter: invert();
-        }
+            margin-left: 40px;
 
+        }
+        info>div>ul>li{
+            margin-left: 70px;
+        }
         #reload {
             position: fixed;
             top: 0px;
