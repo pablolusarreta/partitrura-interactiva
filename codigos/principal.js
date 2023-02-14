@@ -3,7 +3,8 @@
 const { dialog } = require('electron').remote
 const { remote, ipcRenderer } = require('electron')
 const fs = require('fs')
-
+const claseDocumento = 'partituras1676408804968'
+const anade_clase = () => { for (let i in RUEDAACORDES) { RUEDAACORDES[i].clase = claseDocumento; guardaLS() } }
 let AMDHMS = (t) => {
     let d = new Date(t);
     let M = Number(d.getMonth()) + 1; let D = Number(d.getDate()); let h = Number(d.getHours());
@@ -104,6 +105,7 @@ function inicio(id) {
     if (localStorage.RUEDAACORDES) {
         RUEDAACORDES = JSON.parse(localStorage.getItem('RUEDAACORDES'));
         RUEDAACORDESCONFIG = JSON.parse(localStorage.getItem('RUEDAACORDESCONFIG'));
+        //anade_clase()
         var S = '';
         //for (var i in RUEDAACORDES) { RUEDAACORDES[i].titulo = RUEDAACORDES[i].titulo.trim() } guardaLS()
         orden[2] = RUEDAACORDESCONFIG.ordenlista
@@ -270,6 +272,7 @@ function elimina_documento(Ob) {
         }
     })
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function guarda_titulo_grafico(id, v) {
     for (var i in RUEDAACORDES[doc_select].grafico) {

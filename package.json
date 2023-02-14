@@ -6,7 +6,6 @@
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },
   "author": "Pablo Lusarreta",

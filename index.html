@@ -107,6 +107,15 @@
 
     </div>
     <div id="dev" ondblclick="ipcRenderer.send('dev', 1)"></div>
+    <!------------------------------------------------------------------------------------------------------------------->
+    <div id="telon"></div>
+    <div id="alertas">
+        <div></div>
+        <div onclick="alerta({estado: false})">+</div>
+        <button>Aceptar</button>
+        <button onclick="alerta({estado: false})">Cancelar</button>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------->
     <info></info>
 </body>
 
