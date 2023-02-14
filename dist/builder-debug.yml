@@ -14,8 +14,8 @@ x64:
   nodeModuleFilePatterns: []
 nsis:
   script: |-
-    !include "D:\nodejs\electron\partituras\node_modules\app-builder-lib\templates\nsis\include\StdUtils.nsh"
-    !addincludedir "D:\nodejs\electron\partituras\node_modules\app-builder-lib\templates\nsis\include"
+    !include "D:\nodejs\00 electron\partituras\node_modules\app-builder-lib\templates\nsis\include\StdUtils.nsh"
+    !addincludedir "D:\nodejs\00 electron\partituras\node_modules\app-builder-lib\templates\nsis\include"
     !macro _isUpdated _a _b _t _f
       ${StdUtils.TestParameter} $R9 "updated"
       StrCmp "$R9" "true" `${_t}` `${_f}`
@@ -88,7 +88,7 @@ nsis:
     !macroend
 
     !addplugindir /x86-unicode "C:\Users\pablo\AppData\Local\electron-builder\Cache\nsis\nsis-resources-3.4.1\plugins\x86-unicode"
-    !include "C:\Users\pablo\AppData\Local\Temp\t-6N6A9C\0-messages.nsh"
+    !include "C:\Users\pablo\AppData\Local\Temp\t-X8EjK7\0-messages.nsh"
 
     Var newStartMenuLink
     Var oldStartMenuLink
