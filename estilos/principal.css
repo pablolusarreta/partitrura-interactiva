@@ -305,7 +305,15 @@
             background-image: linear-gradient(-90deg, #fff, #ccc);
         }
 
-        /*#fondo_listado>div:nth-child(1) {}*/
+        #fondo_listado>div:nth-child(1)>div {
+            top: -90px;
+            left: 120px;
+            width: 200vw;
+            position: absolute;
+            font-size: 140px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.4)
+        }
 
         #fondo_listado>div:nth-child(2) {
             position: fixed;
@@ -399,6 +407,7 @@
         info>div:nth-child(1):hover {
             color: #000;
         }
+
         #edicion {
             display: none;
             position: fixed;
@@ -679,10 +688,12 @@
             /*outline: 1px solid #ff0;*/
             background-color: transparent;
         }
-        #controles>table>tbody>tr>td:nth-child(6)>span>span{
-            padding:0px 10px;
+
+        #controles>table>tbody>tr>td:nth-child(6)>span>span {
+            padding: 0px 10px;
             background-color: #ddd;
         }
+
         #tema {
             display: none;
             position: fixed;
@@ -706,6 +717,7 @@
             background-color: #fff;
             box-shadow: 10px 10px 50px #999;
         }
+
         info>div:nth-child(1) {
             position: fixed;
             right: 3%;
@@ -718,7 +730,7 @@
             left: 1%;
             top: 2%;
             width: 98%;
-            height:0%;
+            height: 0%;
             font-size: 16px;
             font-family: "fuente100";
             background-color: #000;
@@ -741,9 +753,11 @@
             margin-left: 40px;
 
         }
-        info>div>ul>li{
+
+        info>div>ul>li {
             margin-left: 70px;
         }
+
         #reload {
             position: fixed;
             top: 0px;
