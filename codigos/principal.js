@@ -321,13 +321,12 @@ function guarda_compas_grafico(Ob) {
                 for (var j = 0; j < (n_comp - comp); j++) {
                     RUEDAACORDES[doc_select].grafico[i].compas.push(['']);
                 }
-
             } else {
                 break;
-                return false;
             }
             guardaLS();
             Ob.parentNode.parentNode.childNodes[1].innerHTML = crea_compas_grafico(i);
+            carga_documento(doc_select)
             break;
         }
     }
