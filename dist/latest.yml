@@ -1,8 +1,8 @@
 version: 7.3.0
 files:
   - url: Partituras-interactivas-cifradas-Setup-7.3.0.exe
-    sha512: gYZ1U3df47vPPGLloGghPAJFcaThT+R6rrnGhqWy3XCykaJhbgPHXAfbJvU6EnViYca34EUzI0iKQOuDisF9EA==
-    size: 48502752
+    sha512: ovrBmThsSAU4X9f+n+zQJrRJRBQ8s3orP3lSY94hNwZHDmmWRbs0TLiQul2j0MvqpwzJGjBTnRtJkCmeZW1y2w==
+    size: 48502866
 path: Partituras-interactivas-cifradas-Setup-7.3.0.exe
-sha512: gYZ1U3df47vPPGLloGghPAJFcaThT+R6rrnGhqWy3XCykaJhbgPHXAfbJvU6EnViYca34EUzI0iKQOuDisF9EA==
-releaseDate: '2023-02-16T08:59:17.505Z'
+sha512: ovrBmThsSAU4X9f+n+zQJrRJRBQ8s3orP3lSY94hNwZHDmmWRbs0TLiQul2j0MvqpwzJGjBTnRtJkCmeZW1y2w==
+releaseDate: '2023-02-27T23:15:51.635Z'

@@ -535,11 +535,6 @@ function acorta_n(n) {
     }
     return Number(as[0] + '.' + ss);
 }
-function imprime() {
-    document.getElementById('audio').style.display = 'none'; document.getElementById('tema').style.display = 'none';
-    window.print();
-    document.getElementById('audio').style.display = 'block'; document.getElementById('tema').style.display = 'block';
-}
 function guarda_config(v) {
     RUEDAACORDESCONFIG.ordenlista = v
     guardaCF()
@@ -559,6 +554,32 @@ const alerta = param => {
     }
 
 }
+const electron = require('electron')
+const BrowserWindow = electron.remote.BrowserWindow;
+var options = {
+    silent: false,
+    printBackground: true,
+    color: false,
+    margin: {
+        marginType: 'printableArea'
+    },
+    landscape: false,
+    pagesPerSheet: 1,
+    collate: false,
+    copies: 1,
+    header: 'Header of the Page',
+    footer: 'Footer of the Page'
+}
+const imprime = () => {
+    document.getElementById('audio').style.display = 'none'; 
+    document.getElementById('tema').style.display = 'none';
+    //let win = BrowserWindow.getFocusedWindow();
+    let win = BrowserWindow.getAllWindows()[0];
+    win.webContents.print(options, (success, failureReason) => {
+        if (!success) console.log(failureReason);
+        location.reload()
+    });
+}/**/
 ////////////////////////////////////////////////////////////////////////////////
 const informacion = () => {
     let ob = document.getElementsByTagName('info')[0]

@@ -6,7 +6,19 @@ input, select {
     border: 0;
 }
 
-body>span, div>table>caption>span, div>table>caption>div, #listado>div>div:nth-child(3), #menu, #fondo_listado, div>table>caption>select, div>table>caption>span, #edicion, #audio, #tema, #codigo_tema, info {
+body>span,
+div>table>caption>span,
+div>table>caption>div,
+#listado>div>div:nth-child(3),
+#menu,
+#fondo_listado,
+div>table>caption>select,
+div>table>caption>span,
+#edicion,
+#audio,
+#tema, 
+#codigo_tema, 
+info {
     display: none;
 }
 
