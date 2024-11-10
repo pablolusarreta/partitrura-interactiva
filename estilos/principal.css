@@ -30,7 +30,7 @@ body {
     margin: 0px;
     padding: 0px;
     cursor: default;
-    background-color: transparent;
+    background-color: #ccc;
     user-select: none;
 }
 
@@ -212,7 +212,7 @@ input[type=range] {
     padding: 0px;
     width: 100%;
     min-height: calc(100vh - 80px);
-    ;
+    background-color: #ccc;
 }
 
 #partituras>div {
@@ -221,8 +221,12 @@ input[type=range] {
     vertical-align: text-top;
 }
 
-/*#partituras>div>table>tbody>tr>td>table>tbody>tr>td {}*/
-
+#partituras table {
+    background-color: #fff;
+}
+#partituras>div>table>caption>input{
+    background-color:transparent;
+}
 #titulo_documento {
     font-family: 'fuente100';
     font-size: 46px;
