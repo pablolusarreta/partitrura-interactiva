@@ -440,10 +440,12 @@ info>div:nth-child(1):hover {
 
 #edicion>textarea {
     font-family: Consolas, "Lucida Console", Arial, Helvetica, sans-serif;
-    color: #666;
-    font-size: 14px;
+    background-color: #222;
+    color: #ccc;
+    font-size: 15px;
+    font-weight: 900;
     padding: 4px 10px;
-    border: 2px solid #ccc;
+    border: 2px solid #222;
     min-width: calc(100% - 80px);
     max-width: calc(100% - 80px);
     min-height: calc(100% - 200px);

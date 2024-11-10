@@ -57,7 +57,12 @@ function muestra_ficheros() {
     txt.value = ''
     let url = dialog.showOpenDialog({
         properties: ['openFile'],
-        filters: [{ name: 'audio', extensions: ['mp3', 'wav', 'ogg'] }, { name: 'Todos los ficheros', extensions: ['*'] }]
+        filters: [
+            { name: 'audio/video', extensions: ['mp3', 'wav', 'ogg', 'mp4', 'mov', 'avi'] },
+            { name: 'audio', extensions: ['mp3', 'wav', 'ogg'] },
+            { name: 'video', extensions: ['mp4', 'mov', 'avi'] },
+            { name: 'Todos los ficheros', extensions: ['*'] }
+        ]
     }).then(result => {
         if (!result.canceled) {
             let url = result.filePaths[0]
@@ -571,7 +576,7 @@ var options = {
     footer: 'Footer of the Page'
 }
 const imprime = () => {
-    document.getElementById('audio').style.display = 'none'; 
+    document.getElementById('audio').style.display = 'none';
     document.getElementById('tema').style.display = 'none';
     //let win = BrowserWindow.getFocusedWindow();
     let win = BrowserWindow.getAllWindows()[0];
@@ -586,7 +591,7 @@ const informacion = () => {
     let salir = '<div onclick="this.parentNode.style.display=\'none\'">+</div>'
     ob.style.display = 'block'
     fetch('README.md').then(response => response.text())
-        .then(data => ob.innerHTML=`${salir}<div>${data}</div>`);
+        .then(data => ob.innerHTML = `${salir}<div>${data}</div>`);
 
 }
 ////////////////////////////////////////////////////////////////////////////////
