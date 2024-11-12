@@ -598,5 +598,7 @@ const informacion = () => {
 window.onafterprint = () => {
     return false;
 }
-window.onload = inicio
-window.onkeypress = e => { if (e.keyCode == 32) { document.getElementById('tema').pause() } }
+window.addEventListener('load', inicio)
+window.addEventListener('keypress', e => {
+    if (e.keyCode == 32) { document.getElementById('tema').pause() }
+})
