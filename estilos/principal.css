@@ -308,8 +308,10 @@ input[type=range] {
     opacity: 1;
 }
 
-#mas>img, #indice>img, #conf>img, #impres>img, #info>div>img {
+#mas>img, #indice>img, #conf>img, #impres>img, #info>img {
     position: relative;
+    width: 36px;
+    height: 36px;
     top: 6px;
 }
 
@@ -325,6 +327,8 @@ input[type=range] {
 }
 
 #codigo_tema>div>img {
+    width: 27x;
+    height: 27px;
     margin-top: 6px;
 }
 
