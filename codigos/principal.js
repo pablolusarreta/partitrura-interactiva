@@ -244,9 +244,9 @@ function carga_documento(id) {
     // BOTONES EDICION
     var v_zoom = (RUEDAACORDES[doc_select].zoom) ? RUEDAACORDES[doc_select].zoom : 100;
     zoom(v_zoom);
-    S += '<button id="codigo_tema" onclick="cargar_tema();" title="Abre este tema en el EDITOR"><div><img src="img/config27x27.png"></div></button>';
-    S += '<input id="zoom" type="range" min="50" max="100" onchange="zoom(this.value);" onmousedown="EC.style.display=\'none\'" '
-    S += 'onmousemove="zoom(this.value);" value="' + v_zoom + '" title="Zoom partitura" autocomplete="off">';
+    S += '<button id="codigo_tema" onclick="cargar_tema();" title="Abre este tema en el EDITOR"><img src="img/config27x27.png"></button>';
+    //S += '<input id="zoom" type="range" min="50" max="100" onchange="zoom(this.value);" onmousedown="EC.style.display=\'none\'" '
+    //S += 'onmousemove="zoom(this.value);" value="' + v_zoom + '" title="Zoom partitura" autocomplete="off">';
     document.getElementById('audio').style.display = 'block';
     document.getElementById('tema').style.display = 'block';
     document.getElementById('tema').controls = 'true';
