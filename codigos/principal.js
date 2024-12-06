@@ -243,7 +243,7 @@ function carga_documento(id) {
     S += '</td></tr></table>';
     // BOTONES EDICION
     var v_zoom = (RUEDAACORDES[doc_select].zoom) ? RUEDAACORDES[doc_select].zoom : 100;
-    zoom(v_zoom);
+    zoom();
     S += '<button id="codigo_tema" onclick="cargar_tema();" title="Abre este tema en el EDITOR"><img src="img/config27x27.png"></button>';
     //S += '<input id="zoom" type="range" min="50" max="100" onchange="zoom(this.value);" onmousedown="EC.style.display=\'none\'" '
     //S += 'onmousemove="zoom(this.value);" value="' + v_zoom + '" title="Zoom partitura" autocomplete="off">';
@@ -252,18 +252,14 @@ function carga_documento(id) {
     document.getElementById('tema').controls = 'true';
     document.getElementById('controles').innerHTML = S;
 }
-function zoom(v) {
-    //EC.style.display='none'
-    let n = Number(v);
-    let tp = 80;
-    let rel = document.getElementById('partituras').clientHeight / 220;
-    //console.log(rel + '-' + n + ' transform: scale(' + (n / 100) + ') - top: ' + (tp - ((100 - n) * rel)) + 'px')
-    document.getElementById('titulo_documento').style.transform = 'scale(' + (n / 100) + ')';
-    document.getElementById('partituras').style.transform = 'scale(' + (n / 100) + ')';
-    document.getElementById('partituras').style.top = (tp - ((100 - n) * rel)) + 'px';
-
-    RUEDAACORDES[doc_select].zoom = n;
-    guardaLS();
+function zoom() {
+    const v = 1230 + 200
+    let z = document.body.clientWidth / v
+    const parentElement = document.getElementById('partituras')
+    const divElements = parentElement.querySelectorAll(':scope > div')
+    divElements.forEach(div => {
+        div.style.zoom = String(z);
+    });
 }
 function elimina_documento(Ob) {
     alerta({
@@ -598,6 +594,7 @@ const informacion = () => {
 window.onafterprint = () => {
     return false;
 }
+window.addEventListener('resize', zoom)
 window.addEventListener('load', inicio)
 window.addEventListener('keypress', e => {
     if (e.keyCode == 32) { document.getElementById('tema').pause() }
