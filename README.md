@@ -22,10 +22,10 @@
             nos muestra un listado con un solo elemento donde podemos ver:<br>
             Fecha y momento de la creación, nombre en este caso <b>Documento nuevo</b> y el botón para eliminarlo.<br>
             A la derecha en el menú podemos crear un nuevo documento pulsando en :
-<div id="mas"><img src="./img/mas36x36.png"></div>
+<div id="mas"><img src="./img/mas36x36.png" style="width:48px"></div>
         <p>            Si pulsamos sobre el nombre de un elemento este se abre en modo edición.
             Para volver al listado pulsar en :<p>
-<div id="indice"><img src="img/list36x36.png"></div>
+<div id="indice"><img src="img/list36x36.png" style="width:48px"></div>
         </p>
         <p>            Ahora en el modo edicion podemos cambiar el nombre del Tema y sus secciones, así como elegir cuantos
             compases tiene cada sección.<br>
@@ -49,17 +49,17 @@
             Si te salio mal la grabación tendrás que repetirla desde el principio 00:00.<br>
         </p>
 <h2>El menú</h2>
-<div id="mas"><img src="img/mas36x36.png"></div>
+<div id="mas"><img src="img/mas36x36.png" style="width:48px"></div>
 <p>             Si estamos en la pagina inicial crea un Tema nuevo y si estamos en modo edicion una sección.<br><br></p>
-<div id="indice"><img src="img/list36x36.png"></div>
+<div id="indice"><img src="img/list36x36.png" style="width:48px"></div>
 <p>             Vuelve a la pagina inicial o listado de Temas.<br><br></p>
-<div id="conf"><img src="img/config36x36.png"></div>
+<div id="conf"><img src="img/config36x36.png" style="width:48px"></div>
 <p>             Abre la página de edición de código, aquí se pueden editar los datos te toda la base, también 
              sirve para importar los datos de ficheros JSON o guardarlos en ese mismo formato, bien toda la 
              base o por temas independientes<br><br></p>
-<div id="impres"><img src="img/impres36x36.png"></div>
+<div id="impres"><img src="img/impres36x36.png" style="width:48px"></div>
 <p>             Imprime solo la partitura, algunos navegadores permiten crear un pdf, como Chrome o Edge.<br><br></p>
-<div id="info"><img src="img/info36x36.png"></div>
+<div id="info"><img src="img/info36x36.png" style="width:48px"></div>
 <p>             Abre este pequeño manual.<br><br></p>  
 <h2>Sobre el editor de código :</h2>
         La app usa localStorage, una implementación de HTML5 para almacenar la información en texto plano
