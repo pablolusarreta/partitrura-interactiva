@@ -253,13 +253,15 @@ function carga_documento(id) {
     document.getElementById('controles').innerHTML = S;
 }
 function zoom() {
-    const v = 1230 + 200
-    let z = document.body.clientWidth / v
-    const parentElement = document.getElementById('partituras')
-    const divElements = parentElement.querySelectorAll(':scope > div')
-    divElements.forEach(div => {
-        div.style.zoom = String(z);
-    });
+    const v = 1230 * 1.2
+    let z = (document.body.clientWidth / v).toFixed(3)
+    for (const el of ['partituras', 'listado']) {
+        let parentElement = document.getElementById(el)
+        let divElements = parentElement.querySelectorAll(':scope > div')
+        divElements.forEach(div => {
+            div.style.zoom = z;
+        });
+    }
 }
 function elimina_documento(Ob) {
     alerta({
