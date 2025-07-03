@@ -104,7 +104,7 @@ function ordenaCreado(a, b) { if (a.ID === b.ID) { return 0; } else { return (a.
 const orden = [ordenaTitulo, ordenaCreado, 1]
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function inicio(id) {
-    zoom()
+
     EC = document.getElementById('editor_compas')
     PA = document.getElementById('partituras')
     PA.addEventListener('wheel', (e) => {
@@ -149,6 +149,7 @@ function inicio(id) {
             }
         }
     }
+    zoom()
 }
 function copia_portapapeles() {
     document.getElementById('consola').select();
