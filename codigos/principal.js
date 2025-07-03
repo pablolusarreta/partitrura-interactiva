@@ -104,7 +104,15 @@ function ordenaCreado(a, b) { if (a.ID === b.ID) { return 0; } else { return (a.
 const orden = [ordenaTitulo, ordenaCreado, 1]
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function inicio(id) {
+    zoom()
     EC = document.getElementById('editor_compas')
+    PA = document.getElementById('partituras')
+    PA.addEventListener('wheel', (e) => {
+        e.preventDefault(); // Previene el scroll predeterminado
+        if (e.deltaY < 0) { zp += 0.05 } else { zp -= 0.05 }
+        zoom(z)
+        //console.log("Contador Scroll:", z);
+    })
     //localStorage.removeItem('RUEDAACORDES');
     if (!localStorage.RUEDAACORDESCONFIG) { guardaCF() }
     if (localStorage.RUEDAACORDES) {
@@ -252,17 +260,7 @@ function carga_documento(id) {
     document.getElementById('tema').controls = 'true';
     document.getElementById('controles').innerHTML = S;
 }
-function zoom() {
-    const v = 1230 * 1.2
-    let z = (document.body.clientWidth / v).toFixed(3)
-    for (const el of ['partituras', 'listado']) {
-        let parentElement = document.getElementById(el)
-        let divElements = parentElement.querySelectorAll(':scope > div')
-        divElements.forEach(div => {
-            div.style.zoom = z;
-        });
-    }
-}
+
 function elimina_documento(Ob) {
     alerta({
         estado: true,
@@ -592,6 +590,20 @@ const informacion = () => {
         .then(data => ob.innerHTML = `${salir}<div>${data}</div>`);
 
 }
+const v = 1230
+var z = 1
+var zp = 0
+const zoom = nz => {
+    z = (typeof (nz) === 'number') ? nz : Number((document.body.clientWidth / v).toFixed(3))
+    console.log(typeof (z), "z:", z);
+    for (const el of [['partituras', zp], ['listado', 0]]) {
+        let parentElement = document.getElementById(el[0])
+        let divElements = parentElement.querySelectorAll(':scope > div')
+        divElements.forEach(div => {
+            div.style.zoom = z + el[1];
+        });
+    }
+}
 ////////////////////////////////////////////////////////////////////////////////
 window.onafterprint = () => {
     return false;
@@ -601,3 +613,5 @@ window.addEventListener('load', inicio)
 window.addEventListener('keypress', e => {
     if (e.keyCode == 32) { document.getElementById('tema').pause() }
 })
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
